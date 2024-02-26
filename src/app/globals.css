@@ -5,7 +5,11 @@
 * {
   box-sizing: border-box;
 }
-
+body {
+  display: flex;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  height: 100%;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,19 +19,28 @@
   background-color: rgb(29, 28, 28);
   color: white;
 }
-
 :root.light {
-  background-color:white;
+  background-color: white;
   color: black;
 }
-:root.dark .theme-section  {
-  background-color:rgba(39,39,42,.9);
-  box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+.dark-inner {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
-:root.light .theme-section  {
-  background-color:white;
+.light-inner {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+:root.dark .theme-section {
+  background-color: rgba(39, 39, 42, 0.9);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+:root.light .theme-section {
+  background-color: white;
   border: 0 solid #e5e7eb;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
+
 .about-section button:hover {
   border: 1px solid blue;
   animation: border-dance 2s linear infinite ease-in-out;
@@ -36,10 +49,11 @@
 
 .theme-section button:hover {
   opacity: 50%;
-  transition:300ms all ;
+  transition: 300ms all;
 }
-.main-content {
-  height: 1000px;
+.stack-section {
+  display: flex;
+  flex-direction: row;
 }
 
 @keyframes border-dance {
@@ -58,6 +72,16 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .stack-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin-left: 50px;
+  }
+}
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .col-s-1 {

@@ -11,9 +11,16 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body>
-        <div>
-          <Header />
-          <div className="main-content">{children}</div>
+        <div className="flex w-full">
+          <div className="fixed inset-0 flex justify-center sm:px-8">
+            <div className="flex w-full max-w-7xl lg:px-8">
+              <div className="w-full ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20 stroke-neutral-700"></div>
+            </div>
+          </div>
+          <div className="relative flex w-full flex-col">
+            <Header />
+            <div className="main-content">{children}</div>
+          </div>
         </div>
       </body>
     </html>

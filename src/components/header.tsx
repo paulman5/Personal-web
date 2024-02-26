@@ -27,11 +27,6 @@ export default function Header({}) {
     }
   }, [theme]);
 
-  const handleNavigation = (event: any) => {
-    event.preventDefault();
-    router.push("/");
-  };
-
   return (
     <>
       <script
@@ -44,32 +39,29 @@ export default function Header({}) {
             `,
         }}
       />
-      <div
-        className="sticky top-0 z-50 flex pt-5 pl-52 justify-between"
+      <header
+        className="sticky top-0 z-50 flex pt-3justify-between h-20"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.02)" }}
       >
-        <div className="logo-section " style={{ color: "white" }}>
-          <button onClick={handleNavigation}>
-            <img src={Personalimage} alt="Profile"/>
-          </button>
+        <div className="mr-20 ml-20">
+          <div className="about-section absolute flex text-lg left-1/2 transform -translate-x-1/2 gap-10 pt-5">
+            <button>About</button>
+            <button>Projects</button>
+            <button>Articles</button>
+          </div>
+          <div className="theme-section absolute h-12 w-16 rounded-full flex-end right-10 mt-5">
+            <button
+              onClick={() => {
+                const newTheme = theme == "dark" ? "light" : "dark";
+                setTheme(newTheme);
+              }}
+              className="h-12 w-16 rounded-full flex items-center justify-center"
+            >
+              {theme === "dark" ? <Darkbutton /> : <Lightbutton />}
+            </button>
+          </div>
         </div>
-        <div className="about-section flex text-lg absolute left-1/2 transform -translate-x-1/2 pt-5 gap-10">
-          <button>About</button>
-          <button>Projects</button>
-          <button>Articles</button>
-        </div>
-        <div className="theme-section h-12 w-16 rounded-full mr-20">
-          <button
-            onClick={() => {
-              const newTheme = theme == "dark" ? "light" : "dark";
-              setTheme(newTheme);
-            }}
-            className="h-12 w-16 rounded-full flex items-center justify-center"
-          >
-            {theme === "dark" ? <Darkbutton /> : <Lightbutton />}
-          </button>
-        </div>
-      </div>
+      </header>
     </>
   );
 }

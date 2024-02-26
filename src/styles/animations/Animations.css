@@ -1,0 +1,81 @@
+@keyframes flash-green {
+  0% {
+    fill: rgb(197, 253, 197);
+  }
+  50% {
+    fill: rgb(124, 250, 124);
+  }
+  100% {
+    fill: rgb(68, 250, 68);
+  }
+}
+@keyframes animate-stroke {
+  0% {
+    stroke: #929292;
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke: green;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes flash-yellow {
+  0% {
+    fill: rgb(229, 255, 0);
+    filter: drop-shadow(0 0 10px rgb(229, 255, 0));
+  }
+  50% {
+    fill: rgb(229, 255, 0);
+    filter: drop-shadow(0 0 20px rgb(229, 255, 0));
+  }
+  100% {
+    fill: rgb(230, 255, 4);
+    filter: drop-shadow(0 0 10px rgb(230, 255, 4));
+  }
+}
+@keyframes flash-blue {
+  0% {
+    fill: rgb(0, 0, 255);
+    filter: drop-shadow(0 0 10px rgb(0, 0, 255));
+  }
+  50% {
+    fill: rgb(0, 0, 255);
+    filter: drop-shadow(0 0 20px rgb(0, 0, 255));
+  }
+  100% {
+    fill: rgb(0, 0, 255);
+    filter: drop-shadow(0 0 10px rgb(0, 0, 255));
+  }
+}
+@keyframes flash-purple {
+  0% {
+    fill: rgb(128, 0, 128);
+    filter: drop-shadow(0 0 10px rgb(128, 0, 128));
+  }
+  50% {
+    fill: rgb(128, 0, 128);
+    filter: drop-shadow(0 0 20px rgb(128, 0, 128));
+  }
+  100% {
+    fill: rgb(128, 0, 128);
+    filter: drop-shadow(0 0 10px rgb(128, 0, 128));
+  }
+}
+.connection-rect {
+  animation: flash-green 2s linear infinite;
+}
+
+.connection-line {
+  background: linear-gradient(90deg, rgb(197, 253, 197), rgb(68, 250, 68));
+  animation: animate-stroke 2s linear infinite;
+}
+.javascript-letters {
+  animation: flash-yellow 2s linear infinite;
+}
+.typescript-letters {
+  animation: flash-blue 2s linear infinite;
+}
+.csharp-letters {
+  animation: flash-purple 2s linear infinite;
+}
