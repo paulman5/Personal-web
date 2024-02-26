@@ -18,11 +18,19 @@ export default function Header({}) {
   }, []);
 
   useEffect(() => {
+    const secondLayer = document.querySelector(".second-layer");
     if (theme !== null) {
       localStorage.setItem("theme", theme);
       if (theme) {
         document.documentElement.classList.remove("light", "dark", "null");
         document.documentElement.classList.add(theme);
+      }
+      if (theme === "dark") {
+        secondLayer?.classList.remove("second-layer-light")
+        secondLayer?.classList.add("second-layer-dark");
+      } else if (theme === "light") {
+        secondLayer?.classList.remove("second-layer-dark")
+        secondLayer?.classList.add("second-layer-light");
       }
     }
   }, [theme]);
