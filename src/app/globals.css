@@ -90,10 +90,29 @@ body {
   transition: 300ms all;
 }
 .stack-section {
-  display: flex;
-  flex-direction: row;
+  @apply w-96;
 }
-
+.dark .stack-button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+.light .stack-button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230, 230, 230) transparent;
+}
+.stack-button {
+  cursor: pointer;
+  border: 0.1px solid transparent;
+  transition: 300ms all;
+}
+.stack-button:hover {
+  border-color: rgb(14, 10, 10);
+}
+.stack-button:hover + div {
+  display: block;
+  position: relative;
+  
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -102,14 +121,9 @@ body {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 425px) {
   .stack-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    text-align: center;
-    margin-left: 50px;
+    width: 18rem;
   }
 }
 @media only screen and (min-width: 600px) {

@@ -1,50 +1,48 @@
-import { Darkbuttoninfo } from "../Icons/techstack";
-export const Darkbuttons = [
+import { Stackbuttoninfo } from "../Icons/techstack";
+export const Stackbuttons = [
   {
     id: 0,
     label: "HTML",
-    icon: <Darkbuttoninfo.Htmldark />,
+    icon: <Stackbuttoninfo.Htmlbutton />,
   },
   {
     id: 1,
     label: "CSS",
-    icon: <Darkbuttoninfo.Cssdark />,
+    icon: <Stackbuttoninfo.Cssbutton />,
   },
   {
     id: 2,
     label: "Javascript",
-    icon: <Darkbuttoninfo.Javascriptdark />,
+    icon: <Stackbuttoninfo.Javascriptbutton />,
   },
   {
     id: 3,
     label: "Typescript",
-    icon: <Darkbuttoninfo.Typescriptdark />,
+    icon: <Stackbuttoninfo.Typescriptbutton />,
   },
   {
     id: 4,
     label: "ReactJS",
-    icon: <Darkbuttoninfo.Reactdark />,
+    icon: <Stackbuttoninfo.Reactbutton />,
   },
   {
-    id: 4,
+    id: 5,
     label: "NextJS",
-    icon: <Darkbuttoninfo.Nextjsdark />,
+    icon: <Stackbuttoninfo.Nextjsbutton />,
   },
   {
-    id: 4,
+    id: 6,
     label: "Csharp",
-    icon: <Darkbuttoninfo.Csharpdark />,
+    icon: <Stackbuttoninfo.Csharpbutton />,
   },
   {
-    id: 4,
+    id: 7,
     label: "Tailwind",
-    icon: <Darkbuttoninfo.Tailwinddark />,
+    icon: <Stackbuttoninfo.Tailwindbutton />,
   },
   {
-    id: 4,
+    id: 8,
     label: "Postgresql",
-    icon: <Darkbuttoninfo.Postgresqldark />,
+    icon: <Stackbuttoninfo.Postgresqlbutton />,
   },
 ];
-
-export const Lightbuttons = [{}];
