@@ -17,7 +17,7 @@ export const Htmlbutton = () => (
       fill="#fff"
     />
   </svg>
-);
+)
 export const Cssbutton = () => (
   <svg
     width="50"
@@ -43,7 +43,7 @@ export const Cssbutton = () => (
       fill="#fff"
     />
   </svg>
-);
+)
 export const Javascriptbutton = () => (
   <svg
     width="50"
@@ -58,7 +58,7 @@ export const Javascriptbutton = () => (
       fill="#000"
     />
   </svg>
-);
+)
 export const Typescriptbutton = () => (
   <svg
     width="50"
@@ -73,7 +73,7 @@ export const Typescriptbutton = () => (
       fill="#fff"
     />
   </svg>
-);
+)
 export const Reactbutton = () => (
   <svg
     width="50"
@@ -89,20 +89,20 @@ export const Reactbutton = () => (
     <path
       d="M50.307 68.063c26.126 0 47.306-8.087 47.306-18.063 0-9.975-21.18-18.062-47.306-18.062C24.18 31.938 3 40.025 3 50.001c0 9.975 21.18 18.062 47.307 18.062Z"
       stroke="#61DAFB"
-      stroke-width="5"
+      strokeWidth="5"
     />
     <path
       d="M34.664 59.032C47.727 81.658 65.321 95.957 73.96 90.969c8.64-4.988 5.053-27.373-8.01-50C52.885 18.343 35.291 4.044 26.652 9.032c-8.639 4.988-5.052 27.373 8.011 50Z"
       stroke="#61DAFB"
-      stroke-width="5"
+      strokeWidth="5"
     />
     <path
       d="M34.664 40.97c-13.063 22.626-16.65 45.011-8.01 50 8.638 4.987 26.232-9.312 39.295-31.938 13.064-22.627 16.65-45.012 8.01-50-8.638-4.988-26.232 9.31-39.295 31.937Z"
       stroke="#61DAFB"
-      stroke-width="5"
+      strokeWidth="5"
     />
   </svg>
-);
+)
 export const Nextjsbutton = () => (
   <svg
     width="50"
@@ -130,7 +130,7 @@ export const Nextjsbutton = () => (
         gradientUnits="userSpaceOnUse"
       >
         <stop />
-        <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        <stop offset="1" stopColor="#fff" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="b"
@@ -141,11 +141,11 @@ export const Nextjsbutton = () => (
         gradientUnits="userSpaceOnUse"
       >
         <stop />
-        <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        <stop offset="1" stopColor="#fff" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>
-);
+)
 export const Csharpbutton = () => (
   <svg
     width="50"
@@ -175,7 +175,7 @@ export const Csharpbutton = () => (
       fill="#fff"
     />
   </svg>
-);
+)
 export const Tailwindbutton = () => (
   <svg
     width="50"
@@ -189,7 +189,7 @@ export const Tailwindbutton = () => (
       fill="#06B6D4"
     />
   </svg>
-);
+)
 export const Postgresqlbutton = () => (
   <svg
     width="50"
@@ -215,7 +215,7 @@ export const Postgresqlbutton = () => (
       fill="#fff"
     />
   </svg>
-);
+)
 
 export const Stackbuttoninfo = {
   Htmlbutton,
@@ -227,4 +227,4 @@ export const Stackbuttoninfo = {
   Csharpbutton,
   Tailwindbutton,
   Postgresqlbutton,
-};
+}

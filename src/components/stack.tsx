@@ -1,5 +1,5 @@
-import React from "react";
-import { Stackbuttons } from "@/lib/Data/techstackdata";
+import React from "react"
+import { Stackbuttons } from "@/lib/Data/techstackdata"
 
 export default function Stack() {
   const stackbuttons = Stackbuttons.map((item) => (
@@ -7,11 +7,11 @@ export default function Stack() {
       <div className="stack-button flex justify-center w-20 ml-5">
         {item.icon}
       </div>{" "}
-      <div className="absolute float-left bottom-full left-1/2 transform -translate-x-1/2 hidden z-10">
+      <div className=" float-left bottom-full left-1/2 transform -translate-x-1/2 hidden z-10">
         <p>{item.label}</p>
       </div>
     </div>
-  ));
+  ))
   return (
     <>
       <div className="flex justify-center items-center mt-20">
@@ -25,5 +25,5 @@ export default function Stack() {
         </div>
       </div>
     </>
-  );
+  )
 }

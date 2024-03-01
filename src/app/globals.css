@@ -5,6 +5,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   display: flex;
   height: 100%;
@@ -105,13 +108,15 @@ body {
   border: 0.1px solid transparent;
   transition: 300ms all;
 }
-.stack-button:hover {
+.light .stack-button:hover {
   border-color: rgb(14, 10, 10);
+}
+.dark .stack-button:hover {
+  border-color: white;
 }
 .stack-button:hover + div {
   display: block;
   position: relative;
-  
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -126,6 +131,13 @@ body {
     width: 18rem;
   }
 }
+@media only screen and (max-width: 505px) {
+  .roadmap-svg {
+    width: 360px !important;
+    height: 250px !important;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .col-s-1 {
@@ -202,6 +214,12 @@ body {
   }
   .col-12 {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .roadmap-svg {
+    width: 500px;
+    height: 350px;
   }
 }
 @layer utilities {

@@ -1,4 +1,4 @@
-import { Stackbuttoninfo } from "../Icons/techstack";
+import { Stackbuttoninfo } from "../Icons/techstack"
 export const Stackbuttons = [
   {
     id: 0,
@@ -42,7 +42,7 @@ export const Stackbuttons = [
   },
   {
     id: 8,
-    label: "Postgresql",
+    label: "PostgreSQL",
     icon: <Stackbuttoninfo.Postgresqlbutton />,
   },
-];
+]

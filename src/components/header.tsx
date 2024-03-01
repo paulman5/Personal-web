@@ -1,55 +1,55 @@
-"use client";
+"use client"
 
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import Personalimage from "../public/images/profilepicture.jpg";
-import Lightbutton from "../lib/Icons/lightbutton";
-import Darkbutton from "../lib/Icons/darkbutton";
-import { Navdata } from "@/lib/Data/navdata";
+import React, { useState, useEffect } from "react"
+import Image from "next/image"
+import Personalimage from "../public/images/profilepicture.jpg"
+import Lightbutton from "../lib/Icons/lightbutton"
+import Darkbutton from "../lib/Icons/darkbutton"
+import { Navdata } from "@/lib/Data/navdata"
 
 export default function Header() {
-  const [theme, setTheme] = useState<"light" | "dark" | null>(null);
-  const [active, isActive] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark" | null>(null)
+  const [active, isActive] = useState(false)
 
   const navDataMap = Navdata.map((item) => (
     <li key={item.id}>
       {active === false ? (
         <button className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400">
-          {item.title}
+          <a href={item.href}>{item.title}</a>
         </button>
       ) : (
         <button className="relative block px-3 py-2 transition text-teal-500 dark:text-teal-400">
           <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0">
-            {item.title}
+            <a href={item.href}>{item.title}</a>
           </span>
         </button>
       )}
     </li>
-  ));
+  ))
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    console.log(storedTheme);
-    setTheme(storedTheme ?? "light");
-  }, []);
+    const storedTheme = localStorage.getItem("theme")
+    console.log(storedTheme)
+    setTheme(storedTheme ?? "light")
+  }, [])
 
   useEffect(() => {
-    const secondLayer = document.querySelector(".second-layer");
+    const secondLayer = document.querySelector(".second-layer")
     if (theme !== null) {
-      localStorage.setItem("theme", theme);
+      localStorage.setItem("theme", theme)
       if (theme) {
-        document.documentElement.classList.remove("light", "dark", "null");
-        document.documentElement.classList.add(theme);
+        document.documentElement.classList.remove("light", "dark", "null")
+        document.documentElement.classList.add(theme)
       }
       if (theme === "dark") {
-        secondLayer?.classList.remove("second-layer-light");
-        secondLayer?.classList.add("second-layer-dark");
+        secondLayer?.classList.remove("second-layer-light")
+        secondLayer?.classList.add("second-layer-dark")
       } else if (theme === "light") {
-        secondLayer?.classList.remove("second-layer-dark");
-        secondLayer?.classList.add("second-layer-light");
+        secondLayer?.classList.remove("second-layer-dark")
+        secondLayer?.classList.add("second-layer-light")
       }
     }
-  }, [theme]);
+  }, [theme])
 
   return (
     <>
@@ -100,8 +100,8 @@ export default function Header() {
                     <div className="theme-section absolute h-10 w-12 rounded-full flex-end right-10 mt-5">
                       <button
                         onClick={() => {
-                          const newTheme = theme == "dark" ? "light" : "dark";
-                          setTheme(newTheme);
+                          const newTheme = theme == "dark" ? "light" : "dark"
+                          setTheme(newTheme)
                         }}
                         className="h-10 w-12 rounded-full flex items-center justify-center"
                       >
@@ -116,5 +116,5 @@ export default function Header() {
         </div>
       </header>
     </>
-  );
+  )
 }
