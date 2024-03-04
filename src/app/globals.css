@@ -50,6 +50,13 @@ body {
   --tw-bg-opacity: 1;
   color: rgb(39 39 42 / var(--tw-text-opacity));
 }
+.dark h2 {
+  color: white;
+}
+.light h2 {
+  --tw-bg-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity));
+}
 .dark p {
   --tw-text-opacity: 1;
   color: rgb(161 161 170 / var(--tw-text-opacity));
