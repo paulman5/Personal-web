@@ -1,5 +1,5 @@
 import React from "react"
-import { Roadmap } from "@/lib/Icons/roadmap"
+import { Roadmap } from "@/lib/icons/roadmap"
 
 export default function Project() {
   return (
@@ -18,9 +18,9 @@ export default function Project() {
                   solution in which I have learned a lot about frontend and
                   backend engineering. Additionally, this application leverages
                   external APIs to enhance efficiency of the software
-                  architecture. Due to external APIs user experience is enhanced
-                  due to combining rich feature sets of our own implementations
-                  and already existing solutions.
+                  architecture. Due to the use of external APIs user experience
+                  is enhanced through combining rich feature sets of our own
+                  implementations and already existing solutions.
                 </p>
               </div>
             </div>

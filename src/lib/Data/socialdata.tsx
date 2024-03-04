@@ -1,4 +1,4 @@
-import { Linkedinbutton, Githubbutton } from "../Icons/socialbuttons";
+import { Linkedinbutton, Githubbutton } from "../icons/socialbuttons"
 
 export const Socialdata = [
   {
@@ -13,4 +13,4 @@ export const Socialdata = [
     icon: <Githubbutton />,
     href: "https://github.com/paulman5",
   },
-];
+]

@@ -4,6 +4,11 @@
 
 * {
   box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
 }
 html {
   scroll-behavior: smooth;
@@ -117,6 +122,12 @@ body {
 .stack-button:hover + div {
   display: block;
   position: relative;
+}
+.dark .article-overview .article-hover {
+  background-color: rgba(39, 39, 42, 0.5) !important;
+}
+.dark .article-overview h2 {
+  color: white;
 }
 @media (prefers-color-scheme: dark) {
   :root {

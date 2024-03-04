@@ -1,11 +1,12 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
+import Link from "next/link"
 import Image from "next/image"
 import Personalimage from "../public/images/profilepicture.jpg"
-import Lightbutton from "../lib/Icons/lightbutton"
-import Darkbutton from "../lib/Icons/darkbutton"
-import { Navdata } from "@/lib/Data/navdata"
+import Lightbutton from "../lib/icons/lightbutton"
+import Darkbutton from "../lib/icons/darkbutton"
+import { Navdata } from "@/lib/data/navdata"
 
 export default function Header() {
   const [theme, setTheme] = useState<"light" | "dark" | null>(null)
@@ -78,11 +79,10 @@ export default function Header() {
               <div className="relative px-4 sm:px-8 lg:px-12">
                 <div className="mx-auto max-w-2xl lg:max-w-5xl">
                   <div className="relative flex gap-4">
-                    <div>
-                      {" "}
+                    <Link href="/">
                       <div
                         className="logo-section flex mr-auto ml-auto mt-20"
-                        style={{ color: "white" }}
+                        style={{ color: "white", cursor: "pointer" }}
                       >
                         <Image
                           style={{ borderRadius: "9999px" }}
@@ -93,11 +93,11 @@ export default function Header() {
                           priority
                         />
                       </div>
-                    </div>
+                    </Link>
                     <div className="about-section absolute flex text-lg left-1/2 transform -translate-x-1/2 gap-10 pt-5">
                       <ul className="flex flex-row gap-5">{navDataMap}</ul>
                     </div>
-                    <div className="theme-section absolute h-10 w-12 rounded-full flex-end right-10 mt-5">
+                    <div className="theme-section fixed h-10 w-12 rounded-full flex-end right-10 mt-5">
                       <button
                         onClick={() => {
                           const newTheme = theme == "dark" ? "light" : "dark"

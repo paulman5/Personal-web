@@ -1,4 +1,4 @@
-export const Htmlbutton = () => (
+const Htmlbutton = () => (
   <svg
     width="50"
     height="70"
@@ -18,7 +18,7 @@ export const Htmlbutton = () => (
     />
   </svg>
 )
-export const Cssbutton = () => (
+const Cssbutton = () => (
   <svg
     width="50"
     height="70"
@@ -44,7 +44,7 @@ export const Cssbutton = () => (
     />
   </svg>
 )
-export const Javascriptbutton = () => (
+const Javascriptbutton = () => (
   <svg
     width="50"
     height="70"
@@ -59,7 +59,7 @@ export const Javascriptbutton = () => (
     />
   </svg>
 )
-export const Typescriptbutton = () => (
+const Typescriptbutton = () => (
   <svg
     width="50"
     height="70"
@@ -74,7 +74,7 @@ export const Typescriptbutton = () => (
     />
   </svg>
 )
-export const Reactbutton = () => (
+const Reactbutton = () => (
   <svg
     width="50"
     height="70"
@@ -103,7 +103,7 @@ export const Reactbutton = () => (
     />
   </svg>
 )
-export const Nextjsbutton = () => (
+const Nextjsbutton = () => (
   <svg
     width="50"
     height="70"
@@ -146,7 +146,7 @@ export const Nextjsbutton = () => (
     </defs>
   </svg>
 )
-export const Csharpbutton = () => (
+const Csharpbutton = () => (
   <svg
     width="50"
     height="70"
@@ -176,7 +176,7 @@ export const Csharpbutton = () => (
     />
   </svg>
 )
-export const Tailwindbutton = () => (
+const Tailwindbutton = () => (
   <svg
     width="50"
     height="70"
@@ -190,7 +190,7 @@ export const Tailwindbutton = () => (
     />
   </svg>
 )
-export const Postgresqlbutton = () => (
+const Postgresqlbutton = () => (
   <svg
     width="50"
     height="70"

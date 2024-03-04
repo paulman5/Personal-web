@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import React, { useState, useEffect } from "react";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "../components/header";
+import React, { useState, useEffect } from "react"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import Header from "../components/header"
 
 // Define a type for the context value
 
@@ -24,7 +24,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </div>
       </body>
     </html>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

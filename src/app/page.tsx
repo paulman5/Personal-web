@@ -3,6 +3,7 @@ import About from "../components/about"
 import Stack from "@/components/stack"
 import Project from "@/components/project"
 import Article from "@/components/article"
+import Footer from "@/components/footer"
 
 export default function page() {
   return (
@@ -11,6 +12,7 @@ export default function page() {
       <Stack />
       <Project />
       <Article />
+      <Footer />
     </>
   )
 }
