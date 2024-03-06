@@ -19,7 +19,7 @@ export default function Articles() {
             <div className="relative px-4 sm:px-8 lg:px-12">
               <div className="mx-auto max-w-2xl lg:max-w-5xl">
                 <div className="flex justify-center items-center text-center mt-8">
-                  <h1 className="font-bold tracking-tight text-zinc-800 sm:text-4xl">
+                  <h1 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
                     Storage decentralisation, the future of digital
                     infrastructure
                   </h1>
@@ -46,7 +46,7 @@ export default function Articles() {
                   </p>
                 </div>
                 <div className="flex items-center mt-5 ml-10">
-                  <h2 className="font-bold tracking-tight text-zinc-800 sm:text-2xl mt-10">
+                  <h2 className="text-2xl font-bold tracking-tight text-zinc-800 sm:text-2xl mt-10">
                     What is the diffference between centralised and
                     decentralised storage?
                   </h2>
@@ -67,7 +67,7 @@ export default function Articles() {
                   </p>
                 </div>
                 <div className="flex items-center ml-10">
-                  <h2 className="font-bold tracking-tight text-zinc-800 sm:text-2xl mt-10">
+                  <h2 className="text-2xl font-bold tracking-tight text-zinc-800 sm:text-2xl mt-10">
                     Is decentralised storage always better?
                   </h2>
                 </div>
@@ -144,7 +144,7 @@ export default function Articles() {
                   </p>
                 </div>
                 <div className="flex items-center ml-10">
-                  <h2 className="font-bold tracking-tight text-zinc-800 sm:text-2xl mt-10">
+                  <h2 className="text-2xl font-bold tracking-tight text-zinc-800 sm:text-2xl mt-10">
                     Since decentralisation seems so robust, why is not it
                     already widely adopted?
                   </h2>

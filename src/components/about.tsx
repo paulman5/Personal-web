@@ -19,7 +19,7 @@ export default function About() {
         <div className="relative px-4 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl lg:max-w-5xl">
             <div className="max-w-2xl">
-              <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              <h1 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
                 Software engineer, Blockchain learner.
               </h1>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">

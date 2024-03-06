@@ -15,7 +15,7 @@ export default function Stack() {
   return (
     <>
       <div className="flex justify-center items-center mt-20">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
+        <h1 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
           My Tech Stack
         </h1>
       </div>

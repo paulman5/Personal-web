@@ -26,7 +26,7 @@ export default function Header() {
     if (pathname != "/" && navigationdiv) {
       navigationdiv.classList.add("hidden")
     } else {
-      navigationdiv.classList.remove("hidden")
+      navigationdiv?.classList.remove("hidden")
     }
   }, [pathname])
 
@@ -96,7 +96,7 @@ export default function Header() {
                         />
                       </Link>
                     </div>
-                    <div className="about-section absolute flex text-lg left-1/2 transform -translate-x-1/2 gap-10 pt-5">
+                    <div className="about-section absolute flex text-lg left-1/2 transform -translate-x-1/2 gap-10 pt-5 smax:hidden">
                       <ul className="flex flex-row gap-5">{navDataMap}</ul>
                     </div>
                     <div className="theme-section fixed h-10 w-12 rounded-full flex-end right-10 mt-5">
