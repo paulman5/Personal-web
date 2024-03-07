@@ -2,8 +2,8 @@
 
 import React, { useEffect } from "react"
 import Modalhook from "../hooks/modalhook"
-import { Closebutton } from "../lib/icons/closebutton"
-import { Hello } from "../lib/icons/hello"
+import { Closebutton } from "../lib/icons f/closebutton"
+import { Hello } from "../lib/icons f/hello"
 import { Tooltip as ReactTooltip } from "react-tooltip"
 
 export default function Footer() {

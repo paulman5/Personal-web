@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import blockchainstorage from "../../../lib/icons/articleimages/blockchainstorage.jpg"
-import { Articledata } from "@/lib/data f/articledata"
+import { Articledata } from "@/lib/data/articledata"
 import Footer from "@/components/footer"
 
 export default function Articles() {

@@ -1,5 +1,5 @@
 import React from "react"
-import { Stackbuttons } from "@/lib/data f/techstackdata"
+import { Stackbuttons } from "@/lib/data/techstackdata"
 
 export default function Stack() {
   const stackbuttons = Stackbuttons.map((item) => (

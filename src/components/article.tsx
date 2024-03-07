@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "next/link"
-import { Articledata } from "../lib/data f/articledata"
+import { Articledata } from "../lib/data/articledata"
 
 export default function Article() {
   const articledata = Articledata.map((item) => (

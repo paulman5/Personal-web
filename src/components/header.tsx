@@ -4,9 +4,9 @@ import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Personalimage from "../public/images/profilepicture.jpg"
-import Lightbutton from "../lib/icons/lightbutton"
-import Darkbutton from "../lib/icons/darkbutton"
-import { Navdata } from "../lib/data f/navdata"
+import Lightbutton from "../lib/icons f/lightbutton"
+import Darkbutton from "../lib/icons f/darkbutton"
+import { Navdata } from "../lib/data/navdata"
 import Pathhook from "../hooks/pathhook"
 
 export default function Header() {
