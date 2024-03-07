@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useEffect } from "react"
-import Modalhook from "@/hooks/modalhook"
-import { Closebutton } from "@/lib/icons/closebutton"
-import { Hello } from "@/lib/icons/hello"
+import Modalhook from "../hooks/modalhook"
+import { Closebutton } from "../lib/icons/closebutton"
+import { Hello } from "../lib/icons/hello"
 import { Tooltip as ReactTooltip } from "react-tooltip"
 
 export default function Footer() {

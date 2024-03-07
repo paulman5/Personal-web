@@ -6,8 +6,8 @@ import Image from "next/image"
 import Personalimage from "../public/images/profilepicture.jpg"
 import Lightbutton from "../lib/icons/lightbutton"
 import Darkbutton from "../lib/icons/darkbutton"
-import { Navdata } from "@/lib/data/navdata"
-import Pathhook from "@/hooks/pathhook"
+import { Navdata } from "../lib/data/navdata"
+import Pathhook from "../hooks/pathhook"
 
 export default function Header() {
   const [theme, setTheme] = useState<"light" | "dark" | null>(null)
@@ -31,8 +31,9 @@ export default function Header() {
   }, [pathname])
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme")
+    const storedTheme = localStorage.getItem("theme") as "light" | "dark" | null
     console.log(storedTheme)
+
     setTheme(storedTheme ?? "light")
   }, [])
 
@@ -96,7 +97,7 @@ export default function Header() {
                         />
                       </Link>
                     </div>
-                    <div className="about-section absolute flex text-lg left-1/2 transform -translate-x-1/2 gap-10 pt-5 smax:hidden">
+                    <div className="about-section absolute flex text-lg left-1/2 transform -translate-x-1/2 gap-10 pt-5">
                       <ul className="flex flex-row gap-5">{navDataMap}</ul>
                     </div>
                     <div className="theme-section fixed h-10 w-12 rounded-full flex-end right-10 mt-5">
