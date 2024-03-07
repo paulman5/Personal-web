@@ -1,6 +1,6 @@
 import React from "react"
 import "../styles/animations/animations.css"
-import { Socialdata } from "../lib/data/socialdata"
+import { Socialdata } from "../lib/data f/socialdata"
 
 const socialitems = Socialdata.map((item) => (
   <a

@@ -6,7 +6,7 @@ import Image from "next/image"
 import Personalimage from "../public/images/profilepicture.jpg"
 import Lightbutton from "../lib/icons/lightbutton"
 import Darkbutton from "../lib/icons/darkbutton"
-import { Navdata } from "../lib/data/navdata"
+import { Navdata } from "../lib/data f/navdata"
 import Pathhook from "../hooks/pathhook"
 
 export default function Header() {
