@@ -1,4 +1,4 @@
-import { Stackbuttoninfo } from "../icons f/techstack"
+import { Stackbuttoninfo } from "../icons/techstack"
 export const Stackbuttons = [
   {
     id: 0,

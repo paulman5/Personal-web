@@ -1,4 +1,4 @@
-import { Linkedinbutton, Githubbutton } from "../icons f/socialbuttons"
+import { Linkedinbutton, Githubbutton } from "../icons/socialbuttons"
 
 export const Socialdata = [
   {

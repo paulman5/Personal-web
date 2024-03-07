@@ -1,5 +1,5 @@
 import React from "react"
-import { Roadmap } from "../lib/icons f/roadmap"
+import { Roadmap } from "../lib/icons/roadmap"
 
 export default function Project() {
   return (
