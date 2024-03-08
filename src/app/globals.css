@@ -167,9 +167,12 @@ body {
   }
 }
 @media only screen and (max-width: 505px) {
+  .roadmap {
+    margin-top: 1rem !important;
+  }
   .roadmap-svg {
-    width: 360px !important;
-    height: 250px !important;
+    width: 460px !important;
+    height: 390px !important;
   }
 }
 

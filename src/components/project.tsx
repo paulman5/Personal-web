@@ -27,7 +27,7 @@ export default function Project() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center mt-20 ">
+      <div className="roadmap flex justify-center items-center mt-20 ">
         <Roadmap />
       </div>
     </>
