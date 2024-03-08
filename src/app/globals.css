@@ -90,7 +90,7 @@ body {
 }
 .second-layer-light {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
 .dark-inner {
   --tw-bg-opacity: 1;
@@ -140,7 +140,7 @@ body {
   display: block;
   position: relative;
 }
-.dark .article-overview .article-hover {
+.dark .article-overview:hover {
   background-color: rgba(39, 39, 42, 0.5) !important;
 }
 .dark .article-overview h2 {
