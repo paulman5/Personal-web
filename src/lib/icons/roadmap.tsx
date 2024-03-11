@@ -142,17 +142,17 @@ export const Roadmap = () => (
     <path
       d="M586.932 112.864c15.642 0 28.322-4.349 28.322-9.713 0-5.365-12.68-9.713-28.322-9.713-15.641 0-28.321 4.348-28.321 9.713 0 5.364 12.68 9.713 28.321 9.713Z"
       stroke="#61DAFB"
-      stroke-width="5"
+      strokeWidth="5"
     />
     <path
       d="M577.568 108.007c7.82 12.168 18.353 19.857 23.525 17.175 5.172-2.682 3.025-14.72-4.796-26.888-7.821-12.167-18.353-19.856-23.525-17.174-5.172 2.682-3.025 14.72 4.796 26.887Z"
       stroke="#61DAFB"
-      stroke-width="5"
+      strokeWidth="5"
     />
     <path
       d="M577.568 98.294c-7.821 12.168-9.968 24.206-4.796 26.888 5.172 2.682 15.705-5.007 23.525-17.175 7.821-12.167 9.968-24.205 4.796-26.887-5.172-2.682-15.705 5.007-23.525 17.174Z"
       stroke="#61DAFB"
-      stroke-width="5"
+      strokeWidth="5"
     />
     <path
       d="M585.803 217.48a.999.999 0 0 0 1.414 0l6.364-6.364a1 1 0 0 0-1.414-1.414l-5.657 5.657-5.657-5.657a.999.999 0 1 0-1.414 1.414l6.364 6.364Zm-.293-87.441v86.734h2v-86.734h-2Z"
@@ -208,8 +208,8 @@ export const Roadmap = () => (
     <path
       transform="rotate(16.258 -527.067 75.286) skewX(.036)"
       stroke="#000"
-      stroke-opacity=".5"
-      stroke-width=".5"
+      strokeOpacity=".5"
+      strokeWidth=".5"
       d="M0-.25h782.283"
     />
     <path
@@ -249,7 +249,7 @@ export const Roadmap = () => (
         gradientUnits="userSpaceOnUse"
       >
         <stop />
-        <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        <stop offset="1" stopColor="#fff" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="grad2"
@@ -260,7 +260,7 @@ export const Roadmap = () => (
         gradientUnits="userSpaceOnUse"
       >
         <stop />
-        <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        <stop offset="1" stopColor="#fff" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>

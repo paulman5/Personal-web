@@ -17,10 +17,21 @@ body {
   display: flex;
   height: 100%;
 }
+input:focus {
+  outline: none !important;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}
+.active {
+  border-color: rgb(
+    121,
+    168,
+    248
+  ) !important; /* Change to whatever color you want */
 }
 .dark {
   background-color: black;
@@ -54,6 +65,13 @@ body {
   color: white;
 }
 .light h2 {
+  --tw-bg-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity));
+}
+.dark h3 {
+  color: white;
+}
+.light h3s {
   --tw-bg-opacity: 1;
   color: rgb(39 39 42 / var(--tw-text-opacity));
 }
@@ -140,11 +158,17 @@ body {
   display: block;
   position: relative;
 }
-.dark .article-overview:hover {
-  background-color: rgba(39, 39, 42, 0.5) !important;
+.dark .article-hover:hover {
+  background-color: rgb(39 39 42 / 0.5) !important;
 }
-.dark .article-overview h2 {
-  color: white;
+.dark .email-login input {
+  background-color: #262628 !important;
+}
+.dark .social-login button {
+  border-color: #3d3d42;
+}
+.dark .social-login button:hover {
+  background-color: #52525b;
 }
 
 @media only screen and (max-width: 700px) {

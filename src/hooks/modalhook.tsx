@@ -1,9 +1,18 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
-export default function Modalhook() {
+export interface ModalHook {
+  isOpen?: boolean
+  openModal?: () => void
+  closeModal: () => void
+}
+export default function Modalhook(): ModalHook {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    console.log("isOpen changed:", isOpen)
+  }, [isOpen])
 
   const openModal = () => {
     setIsOpen(true)

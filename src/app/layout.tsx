@@ -4,10 +4,12 @@ import React, { useState, useEffect } from "react"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "../components/header"
+import { AuthContextProvider } from "../context/AuthContext"
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
+      <head></head>
       <body>
         <div className="flex w-full">
           <div className="fixed inset-0 flex justify-center sm:px-8">
@@ -15,10 +17,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <div className="second-layer w-full ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20 stroke-neutral-700 z-10"></div>
             </div>
           </div>
-          <div className="relative flex w-full flex-col">
-            <Header />
-            <div className="main-content">{children}</div>
-          </div>
+          <AuthContextProvider>
+            <div className="relative flex w-full flex-col">
+              <Header />
+              <div className="main-content">{children}</div>
+            </div>
+          </AuthContextProvider>
         </div>
       </body>
     </html>

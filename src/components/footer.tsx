@@ -53,38 +53,36 @@ export default function Footer() {
           <div className="fixed overflow-y-auto	w-screen z-10 inset-0 ">
             <div className="fixed overflow-y-auto w-screen z-10 inset-0 flex items-center justify-center">
               <div className="contact-modal relative bg-white text-left pt-5 pb-4 px-4 rounded-lg overflow-hidden pointer-events-auto sm:w-96">
-                <div className="">
-                  <div className="flex justify-end">
-                    <button
-                      onClick={closeModal}
-                      className="cursor-pointer hover:bg-opacity-35 hover:bg-slate-300 transition-all w-auto"
-                    >
-                      <Closebutton />
-                    </button>
-                  </div>
-                  <div className="flex justify-center mt-4">
-                    <Hello />
-                  </div>
-                  <div className="flex justify-center mt-4">
-                    <h2>Hello visitor!</h2>
-                  </div>
-                  <div className="flex justify-center mt-3 ">
-                    <p>Feel free to contact me</p>
-                  </div>
-                  <div className="flex justify-center mt-3 ">
-                    <button
-                      data-tooltip-id="my-tooltip-1"
-                      onClick={copyToClipboard}
-                      className="my-email font-semibold cursor-pointer"
-                    >
-                      paulmierlo@hotmail.com
-                    </button>
-                    <ReactTooltip
-                      id="my-tooltip-1"
-                      place="bottom"
-                      content="Click to copy to clipboard"
-                    />
-                  </div>
+                <div className="flex justify-end">
+                  <button
+                    onClick={closeModal}
+                    className="cursor-pointer hover:bg-opacity-35 hover:bg-slate-300 transition-all w-auto"
+                  >
+                    <Closebutton />
+                  </button>
+                </div>
+                <div className="flex justify-center mt-4">
+                  <Hello />
+                </div>
+                <div className="flex justify-center mt-4">
+                  <h2>Hello visitor!</h2>
+                </div>
+                <div className="flex justify-center mt-3 ">
+                  <p>Feel free to contact me</p>
+                </div>
+                <div className="flex justify-center mt-3 ">
+                  <button
+                    data-tooltip-id="my-tooltip-1"
+                    onClick={copyToClipboard}
+                    className="my-email font-semibold cursor-pointer"
+                  >
+                    paulmierlo@hotmail.com
+                  </button>
+                  <ReactTooltip
+                    id="my-tooltip-1"
+                    place="bottom"
+                    content="Click to copy to clipboard"
+                  />
                 </div>
               </div>
             </div>
