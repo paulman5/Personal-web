@@ -16,6 +16,9 @@ import {
   signInWithPopup,
   signOut,
   User,
+  setPersistence,
+  browserSessionPersistence,
+  inMemoryPersistence,
 } from "firebase/auth"
 import { auth } from "../app/firebase-config"
 
@@ -42,7 +45,10 @@ const AuthContext = createContext<AuthContextType>({
 })
 
 export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
-  const [authUser, setAuthUser] = useState(false)
+  const currentUser: User | null = auth.currentUser
+  const [authUser, setAuthUser] = useState(
+    false || window.localStorage.getItem("authUser") === "true"
+  )
   const [authUserProfile, setAuthUserProfile] = useState<User | null>(null)
 
   const googleprovider = new GoogleAuthProvider()
@@ -53,8 +59,6 @@ export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
   googleprovider.setCustomParameters({ prompt: "select_account" })
   twitterprovider.setCustomParameters({ prompt: "select_account" })
   appleprovider.setCustomParameters({ prompt: "select_account" })
-
-  const user = auth.currentUser
 
   const signInWithEmail = async () => {
     try {
@@ -67,6 +71,7 @@ export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
   const signInWithGoogle = async () => {
     try {
       let result = await signInWithPopup(auth, googleprovider)
+      setPersistence(auth, inMemoryPersistence)
       setAuthUser(true)
       console.log("result is:", result)
     } catch (error) {
@@ -105,13 +110,24 @@ export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
   const signUserOut = () => {
     signOut(auth)
     setAuthUser(false)
+    localStorage.removeItem("user")
   }
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setAuthUserProfile(currentUser)
+      const storedUser = localStorage.getItem("user")
+      if (currentUser) {
+        setAuthUserProfile(currentUser)
+        localStorage.setItem("user", JSON.stringify(currentUser))
+        window.localStorage.setItem("authUser", "true")
+      } else if (storedUser) {
+        const parsedUser = storedUser ? JSON.parse(storedUser) : null
+        setAuthUser(true)
+        setAuthUserProfile(parsedUser)
+      }
     })
     return () => unsubscribe()
-  }, [user])
+  }, [])
 
   return (
     <AuthContext.Provider

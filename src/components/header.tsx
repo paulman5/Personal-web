@@ -35,6 +35,7 @@ export default function Header() {
       closeModal()
     }
   }, [authUser, closeModal])
+
   useEffect(() => {
     const navigationdiv = document.querySelector(".about-section")
     if (pathname != "/" && navigationdiv) {
