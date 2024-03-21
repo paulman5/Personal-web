@@ -12,11 +12,9 @@ import Pathhook from "../hooks/pathhook"
 import { useRouter } from "next/navigation"
 import Modalhook, { ModalHook } from "../hooks/modalhook"
 import Signupmodal from "./modalcomponents/signupmodal"
-import { UserAuth } from "../context/AuthContext"
 import { sign } from "crypto"
 
 export default function Header() {
-  const { authUser, authUserProfile, signUserOut } = UserAuth()
   const [theme, setTheme] = useState<"light" | "dark" | null>(null)
   const { pathname } = Pathhook()
   const router = useRouter()
@@ -30,11 +28,11 @@ export default function Header() {
     </li>
   ))
 
-  useEffect(() => {
-    if (authUser) {
-      closeModal()
-    }
-  }, [authUser, closeModal])
+  // useEffect(() => {
+  //   if (authUser) {
+  //     closeModal()
+  //   }
+  // }, [authUser, closeModal])
 
   useEffect(() => {
     const navigationdiv = document.querySelector(".about-section")
@@ -119,23 +117,23 @@ export default function Header() {
                       className="absolute flex flow-row text-lg transform -translate-x-1/2 gap-8 pt-16"
                       style={{ left: "90%" }}
                     >
-                      {!authUser ? (
-                        <div className="flex bg-green-400 w-16 h-10 justify-center rounded-md text-base hover:bg-green-300 transition-all">
-                          <button onClick={openModal}>Login</button>
-                        </div>
+                      {/* {!authUser ? ( */}
+                      <div className="flex bg-green-400 w-16 h-10 justify-center rounded-md text-base hover:bg-green-300 transition-all">
+                        <button onClick={openModal}>Login</button>
+                      </div>
                       ) : (
-                        <>
-                          <button className="flex flex-row justify-center text-center items-center w-28 h-8 hover:bg-slate-200 transition-all gap-3 rounded-3xl border-none">
-                            <h2 className="font-medium">
-                              {authUserProfile?.displayName}
-                            </h2>
-                            <Profileicon />
-                          </button>
-                          <div>
-                            <button onClick={signUserOut}>Logout</button>
-                          </div>
-                        </>
-                      )}
+                      <>
+                        <button className="flex flex-row justify-center text-center items-center w-28 h-8 hover:bg-slate-200 transition-all gap-3 rounded-3xl border-none">
+                          <h2 className="font-medium">
+                            {/* {authUserProfile?.displayName} */}
+                          </h2>
+                          <Profileicon />
+                        </button>
+                        <div>
+                          {/* <button onClick={signUserOut}>Logout</button> */}
+                        </div>
+                      </>
+                      {/* )} */}
                     </div>
                     <div className="theme-section fixed h-10 w-12 rounded-full flex-end right-10 mt-5">
                       <button

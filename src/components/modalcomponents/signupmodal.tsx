@@ -11,20 +11,20 @@ import { Closebutton } from "@/lib/icons/closebutton"
 import { ModalHook } from "../../hooks/modalhook"
 
 export default function Signupmodal({ closeModal }: ModalHook) {
-  const {
-    authUser,
-    signInWithEmail,
-    signInWithGoogle,
-    signInWithFacebook,
-    signInWithApple,
-  } = UserAuth()
+  // const {
+  //   authUser,
+  //   // signInWithEmail,
+  //   signInWithGoogle,
+  //   signInWithFacebook,
+  //   signInWithApple,
+  // } = UserAuth()
   const [isActive, setActive] = useState(false)
   const [loginInput, setLoginInput] = useState("")
   const activeDivRef = useRef(null)
 
   useEffect(() => {
     // Function to handle clicks outside the active div
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: any) => {
       if (
         activeDivRef.current &&
         !activeDivRef.current.contains(event.target)

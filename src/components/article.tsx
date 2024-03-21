@@ -6,7 +6,7 @@ export default function Article() {
   const articledata = Articledata.map((item) => (
     <article key={item.id} className="group relative flex flex-col items-start">
       <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-        <div className="article-hover absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>{" "}
+        <div className="article-hover bg-gray-500 absolute -inset-x-4 -inset-y-6 z-0 scale-95 opacity-0 transition group-hover:scale-100 group-hover:opacity-10 sm:-inset-x-6 sm:rounded-2xl"></div>{" "}
         {item && (
           <Link href={item.href}>
             <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl cursor-pointer"></span>
